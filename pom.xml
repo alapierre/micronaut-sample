@@ -31,6 +31,8 @@
         <micronaut.openapi.invoker.package.name>dev.itrust.sample.fk</micronaut.openapi.invoker.package.name>
         <micronaut.openapi.use.reactive>false</micronaut.openapi.use.reactive>
         <micronaut.openapi.server.use.auth>false</micronaut.openapi.server.use.auth>
+        <micronaut.openapi.use.one.of.interfaces>true</micronaut.openapi.use.one.of.interfaces>
+<!--        <micronaut.openapi.generate.http.response.where.required>true</micronaut.openapi.generate.http.response.where.required>-->
         <micronaut.openapi.version>6.13.2-1</micronaut.openapi.version>
     </properties>
 
