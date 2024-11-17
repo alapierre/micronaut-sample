@@ -61,11 +61,7 @@
             <version>${micronaut.openapi.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.micronaut.openapi</groupId>
-            <artifactId>micronaut-openapi-generator</artifactId>
-            <version>${micronaut.openapi.version}</version>
-        </dependency>
+
 
         <dependency>
             <groupId>org.yaml</groupId>
@@ -166,6 +162,13 @@
                 <configuration>
                     <configFile>aot-${packaging}.properties</configFile>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.micronaut.openapi</groupId>
+                        <artifactId>micronaut-openapi-generator</artifactId>
+                        <version>${micronaut.openapi.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

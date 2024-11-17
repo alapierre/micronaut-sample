@@ -2,9 +2,7 @@ package dev.itrust.sample;
 
 import dev.itrust.sample.fk.api.InvoiceApi;
 import dev.itrust.sample.fk.api.model.*;
-import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
-import jakarta.validation.Valid;
 import lombok.val;
 
 import java.math.BigDecimal;
@@ -17,9 +15,15 @@ import java.util.UUID;
  */
 @Controller
 public class InvoiceResource implements InvoiceApi {
+
+//    @Override
+//    public HttpResponse<@Valid InvoiceIdDto> createInvoice(CreateInvoiceRequest createInvoiceRequest) {
+//        return HttpResponse.created(new InvoiceIdDto().docNumber("123").id(UUID.randomUUID()));
+//    }
+
     @Override
-    public HttpResponse<@Valid InvoiceIdDto> createInvoice(CreateInvoiceRequest createInvoiceRequest) {
-        return HttpResponse.created(new InvoiceIdDto().docNumber("123").id(UUID.randomUUID()));
+    public InvoiceIdDto createInvoice(CreateInvoiceRequest createInvoiceRequest) {
+        return new InvoiceIdDto().docNumber("123").id(UUID.randomUUID());
     }
 
     @Override
