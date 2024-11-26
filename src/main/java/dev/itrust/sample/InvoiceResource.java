@@ -30,7 +30,6 @@ public class InvoiceResource implements InvoiceApi {
     public LoadInvoice200Response loadInvoice(UUID id) {
 
         val invoice = new CurrencyInvoiceDto("12345678", "EUR", BigDecimal.valueOf(4.75), LocalDate.now());
-        invoice.setDocType(DocType.FW);
 
         return invoice;
     }
